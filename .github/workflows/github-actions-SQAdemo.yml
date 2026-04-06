@@ -1,0 +1,26 @@
+name: SQA Demo - Verification and Validation CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  verification-and-validation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Verification
+        run: python scripts/verification.py
+
+      # - name: Run Validation
+      #   run: python scripts/validation.py

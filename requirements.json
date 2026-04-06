@@ -1,0 +1,8 @@
+[
+  {
+    "requirement_id": "REQ-HAZ-001A",
+    "parent": "REQ-HAZ-001",
+    "description": "Hazard analysis shall include biological hazards",
+    "source": "117.130(a)"
+  }
+]
