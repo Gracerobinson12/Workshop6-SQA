@@ -3,8 +3,6 @@ name: SQA Demo - Verification and Validation CI
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   verification-and-validation:
@@ -22,5 +20,5 @@ jobs:
       - name: Run Verification
         run: python scripts/verification.py
 
-      # - name: Run Validation
-      #   run: python scripts/validation.py
+      - name: Run Validation
+        run: python scripts/validation.py
